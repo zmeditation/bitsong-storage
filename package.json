@@ -1,0 +1,70 @@
+{
+  "name": "bstudio-storage",
+  "version": "0.0.1-dev.0",
+  "description": "BitSong Studio Storage API",
+  "main": "index.js",
+  "bin": "./dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --log-error --files ./src/server.ts --stack_trace_limit=100 -r trace -r clarify",
+    "build": "tsc -p tsconfig.json",
+    "start": "NODE_ENV=production node dist/server.js",
+    "test": "jest --runInBand",
+    "prettier:check": "prettier -c src/**",
+    "eslint:check": "eslint 'src/**'"
+  },
+  "author": "Angelo Recca",
+  "license": "ISC",
+  "engines": {
+    "node": ">= 14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelorc/bstudio-storage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angelorc/bstudio-storage/issues"
+  },
+  "homepage": "https://github.com/angelorc/bstudio-storage#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
+    "@types/async-retry": "^1.4.5",
+    "@types/busboy": "^1.5.0",
+    "@types/formidable": "^2.0.6",
+    "@types/fs-extra": "^11.0.1",
+    "@types/jest": "^29.5.1",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.1.7",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "babel-jest": "^29.5.0",
+    "enhanced-resolve": "^5.14.0",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "form-data": "^4.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@bitsongjs/storage": "^2.1.0-beta.8",
+    "@fastify/multipart": "^7.6.0",
+    "@fastify/rate-limit": "^8.0.0",
+    "@ipld/car": "^3.1.4",
+    "@web-std/fetch": "^4.1.0",
+    "@web-std/file": "^3.0.2",
+    "carbites": "^1.0.6",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.17.0",
+    "fastify-cors": "^6.1.0",
+    "fastify-metrics": "^10.3.0",
+    "fastify-plugin": "^4.5.0",
+    "formidable": "^2.1.1",
+    "ipfs-car": "^0.8.1",
+    "ipfs-http-client": "^60.0.0",
+    "jsonwebtoken": "^9.0.0"
+  }
+}
